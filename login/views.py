@@ -11,10 +11,11 @@ def user_authenticate(request):
         try:
             user = User.objects.get(username=username)
             if user.check_password(password):
-                return redirect('https://www.google.co.in/')
+                return redirect('https://10.100.82.195/')
             else:
                 return render(request, 'user_authenticate.html', {'message': 'Password is Incorrect!!'})
         except User.DoesNotExist:
             return render(request, 'user_authenticate.html', {'message': 'No such user exists!! Try again'})
 
     return render(request, 'user_authenticate.html', {'message': 'Welcome to Screenly Login'})
+
