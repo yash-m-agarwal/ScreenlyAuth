@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+    <head>
+        <title>Screenly Login</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Bootstrap CSS for styling and layout-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <!-- Add icon library -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" integrity="sha384-DmABxgPhJN5jlTwituIyzIUk6oqyzf3+XuP7q3VfcWA2unxgim7OSSZKKf0KSsnh" crossorigin="anonymous">
+        <link rel='stylesheet' href="{% static 'css/style.css' %}" />
+        <link rel="stylesheet" href="{% static 'css/social.css' %}" />
+    </head>
+
+    <body>
+        <div class="container-fluid">
+
+            <div class="row">
+                <div class="col-sm-12 col-md-4 text-center my-4">
+                    <img src="{% static 'images/logoCSD.jpeg' %}" alt="CSD Logo" height="180" width="230">
+                </div>
+                <div class="col-sm-12 col-md-4 text-center my-4">
+                    <img src="{% static 'images/nitk.png' %}" alt="NITK Logo" height="180" width="210">
+                </div>
+                <div class="col-sm-12 col-md-4 text-center my-4">
+                    <img src="{% static 'images/FARC.png' %}" alt="Club Logo" height="180" width="190">
+                </div>
+            </div>
+
+            <div class="row">
+
+                <div class="col-sm-12 col-md-4 justify-content-center my-4">
+
+                    <h2 class="text-center font-weight-bold team-member" style="margin-top: 24px;">Team Members</h2>
+
+                    <div class="row justify-content-center" style="margin-top: 32px;">
+                        <div class="col-3">
+                            <img src="{% static 'images/nishant-profile.png' %}" alt="Nishant pic" class="card-img">
+                        </div>
+                        <div class="col-lg-7 col-8">
+                            <h3 class="name card-content">Nishant Kumar</h3>
+                            <p class="description card-content">Software Development professional with B.Tech in Information Technology from NITK. Skilled in Python, C++ & Android.</p>
+                            <div class="wrapper">
+                                <ul class="social-icons icon-circle icon-zoom list-unstyled list-inline">
+                                    <li> <a href="https://github.com/NishantKr97" target="_blank"><i class="fab fa-github"></i></a></li>
+                                    <li> <a href="https://www.facebook.com/people/Nishant-Kumar/100003394849691" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                                    <li> <a href="https://www.linkedin.com/in/NishantKr97" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row justify-content-center">
+                        <div class="col-3">
+                            <img src="{% static 'images/yash-profile3.jpg' %}" alt="Yash pic" class="card-img">
+                        </div>
+                        <div class="col-lg-7 col-8">
+                            <h3 class="name card-content">Yash Agarwal</h3>
+                            <p class="description card-content">Sophomore student at NITK, pursuing B.Tech in Computer Science. Software Development and CP enthusiasis.</p>
+                            <div class="wrapper">
+                                <ul class="social-icons icon-circle icon-zoom list-unstyled list-inline">
+                                    <li> <a href="https://github.com/yash-m-agarwal" target="_blank"><i class="fab fa-github"></i></a></li>
+                                    <li> <a href="https://www.facebook.com/yash.m.agrawal.5" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                                    <li> <a href="https://www.linkedin.com/in/yash-agarwal-3b319215a/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!--<div class="col-lg-2 col-1">
+                            <ul class="list-inline social-buttons">
+                                <li><a href="https://github.com/yash-m-agarwal"><i class="fa fa-d fa-github"></i></a></li>
+                                <li><a href="https://www.facebook.com/yash.m.agarwal.5"><i class="fa fa-d fa-facebook"></i></a></li>
+                            </ul>
+                        </div>-->
+                    </div>
+
+                    <div class="row justify-content-center">
+                        <div class="col-3">
+                            <img src="{% static 'images/shivam-profile.jpg' %}" alt="Shivam pic" class="card-img">
+                        </div>
+                        <div class="col-lg-7 col-8">
+                            <h3 class="name card-content">Shivam Potdar</h3>
+                            <p class="description card-content">Electrical and Electronics Engineering student in B.Tech batch of'21. Interested in Microelectronics, Robotics and IoT.</p>
+                            <div class="wrapper">
+                                <ul class="social-icons icon-circle icon-zoom list-unstyled list-inline">
+                                    <li> <a href="https://github.com/shivampotdar" target="_blank"><i class="fab fa-github"></i></a></li>
+                                    <li> <a href="https://www.facebook.com/shivampotdar99" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                                    <li> <a href="https://www.linkedin.com/in/shivam-nitk" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-sm-12 col-md-4 justify-content-center my-4">
+                    <div class="box justify-content-center">
+                        <h1>Login</h1>
+                        <form class="justify-content-center" method="post" action="{% url 'authenticate' %}"> <!--POST-->
+                            {% csrf_token %}
+                            <div class="inputBox justify-content-center">
+                                <input type="text" name="username" required=""> <!--username-->
+                                <label>Username</label>
+                            </div>
+                            <div class="inputBox justify-content-center">
+                                <input type="password" name="password" required=""><!--password-->
+                                <label>Password</label>
+                            </div>
+                            <input type="submit" name="submit" value="Submit">
+                        </form>
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-md-4 justify-content-center my-4">
+
+                    <h2 class="text-center font-weight-bold member" style="margin-top: 24px;">Faculty</h2>
+
+                    <div class="row justify-content-center" style="margin-top: 32px;">
+                        <div class="col-3">
+                            <img src="{% static 'images/pruthviraj-img-zoom.jpg' %}" alt="Pruthviraj Sir" class="card-img">
+                        </div>
+                        <div class="col-lg-7 col-8">
+                            <h3 class="name card-content">Dr. Pruthviraj U</h3>
+                            <p class="description">Assistant Professor (Dept. of Applied Mechanics and Hydraulics).</p>
+                            <span class="description">Faculty adviser of FARC.</span>
+                            <div class="wrapper">
+                                <ul class="social-icons icon-circle icon-zoom list-unstyled list-inline">
+                                    <li> <a href="#" target="_blank"><i class="fab fa-github"></i></a></li>
+                                    <li> <a href="#" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                                    <li> <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                                    <li> <a href="#" target="_blank"><i class="fab fa-google-plus"></i></a></li>
+                                    <li> <a href="#" target="_blank"><i class="fab fa-youtube"></i></a></li>
+                                    <li> <a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row justify-content-center">
+                        <div class="col-3">
+                            <img src="{% static 'images/k-v-gangadharan-image.jpg' %}" alt="Gangadharan Sir" class="card-img">
+                        </div>
+                        <div class="col-lg-7 col-8">
+                            <h3 class="name card-content">Dr. K. V. Gangadharan</h3>
+                            <p class="description card-content">Professor (Dept. of Mechanical Engineering).</p>
+                            <div class="wrapper">
+                                <ul class="social-icons icon-circle icon-zoom list-unstyled list-inline">
+                                    <li> <a href="#" target="_blank"><i class="fab fa-github"></i></a></li>
+                                    <li> <a href="#" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                                    <li> <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                                    <li> <a href="#" target="_blank"><i class="fab fa-google-plus"></i></a></li>
+                                    <li> <a href="#" target="_blank"><i class="fab fa-youtube"></i></a></li>
+                                    <li> <a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="date">
+            Last Updated - 11<sup>th</sup> March, 2019
+        </div>
+    </body>
+    <script>
+        alert('{{ message }}')
+    </script>
+</html>

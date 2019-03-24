@@ -1,0 +1,119 @@
+*{
+    font-family: 'Lato', sans-serif;
+}
+html
+{
+    background-color: #ffffff;/*Background color changed*/
+    height: 100%;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.wrapper {
+    margin-top: 8px;
+}
+
+.description {
+    font-style: italic;
+    font-size: 15px;
+    margin-bottom: 0px;
+}
+
+.name {
+    font-family: serif;
+    font-size: 24px;
+    color: #37474F;
+}
+
+.card-img {
+    display: inline-block;
+    margin-top: 6px;
+    width:96px;
+    height:96px;
+    border-radius:90px;
+}
+
+.card-content {
+    margin-left: 6px;
+}
+
+/* login.css styles */
+.box
+{
+    height: 420px;
+    padding: 40px;
+    /*background: #B0BEC5;*//*Login page transparency removed*/
+    box-sizing: border-box;
+    /*box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5); login page border removed*/
+}
+
+.member h1
+{
+    margin-top: 80px;
+    font-size: 40px;
+}
+
+.box h1
+{
+    margin: 0 0 20px;
+    font-size: 40px;
+    padding: 10px;
+    color: #37474F;
+    text-align: center;
+}
+.box .inputBox
+{
+    position: relative;
+}
+.box .inputBox input
+{
+    width: 100%;
+    padding: 10px 0;
+    font-size: 20px;
+    color: #37474F;
+    letter-spacing: 1px;
+    margin-bottom: 36px;
+    border: none;
+    border-bottom: 2px solid #37474F;
+    outline: none;
+    background: transparent;
+}
+.box .inputBox label
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 20px;
+    color: #37474F;
+    pointer-events: none;
+    transition: 0.5s;
+}
+.box .inputBox input:focus ~ label,
+.box .inputBox input:valid ~ label
+{
+    top: -18px;
+    left: 0;
+    color: #37474F;
+    font-size: 14px;
+}
+.box input[type="submit"]
+{
+    border: none;
+    outline: none;
+    background: #607D8B;
+    margin-top: 20px;
+    padding: 15px 35px;
+    cursor: pointer;
+}
+
+.date {
+    margin-top: 20px;
+    margin-left: 28px;
+    margin-bottom: 20px;
+    color: #37474F;
+    font-weight: bold;
+    font-size: 18px;
+}
